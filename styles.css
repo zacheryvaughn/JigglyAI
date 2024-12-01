@@ -229,6 +229,7 @@ header {
     align-items: center;
     justify-content: center;
     height: 46px;
+    width: 46px;
     border-radius: 100px;
     overflow: hidden;
     cursor: pointer;
@@ -364,7 +365,7 @@ main {
     width: 18px;
 }
 
-#generate-button {
+.generate-button {
     display: flex;
     align-items: center;
     justify-content: center;
@@ -377,6 +378,10 @@ main {
     border-radius: 10px;
     transition: background-color 0.2s;
     cursor: pointer;
+}
+
+#generate-upscale-button {
+    display: none;
 }
 
 #generate-button:hover {
@@ -449,7 +454,7 @@ main {
 }
 
 #settings-dropdown.open {
-    max-height: 530px;
+    max-height: 617px;
 }
 
 #upscaling-dropdown.open {
@@ -582,6 +587,7 @@ main {
     background-color: var(--bg3);
     user-select: none;
     cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, fill 0.2s;
 }
 
 #random-button.selected, #recycle-button.selected {
@@ -598,6 +604,63 @@ main {
 }
 
 #random-button:hover #dice-icon, #recycle-button:hover #recycle-icon {
+    fill: var(--primary-3-main);
+}
+
+#ratios-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#ratios-container h4 {
+    font-size: 15px;
+}
+
+#size-ratios {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 36px;
+    border-radius: 10px;
+    background-color: var(--back3);
+    overflow: hidden;
+}
+
+.size-ratio-option {
+    font-size: 14px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% / 5);
+    height: 100%;
+    cursor: pointer;
+    transition: background-color 0.2s, color 0.2s, fill 0.2s;
+}
+
+#unlock-ratio {
+    fill: var(--font-light);
+}
+
+#unlock-ratio svg {
+    width: 16px;
+    fill: var(--font-light);
+}
+
+.size-ratio-option:hover {
+    color: var(--primary-3-main);
+    background-color: var(--back4);
+}
+
+.size-ratio-option.selected {
+    color: var(--primary-3-main);
+    background-color: var(--back4);
+    cursor: default;
+}
+
+#unlock-ratio.selected svg {
     fill: var(--primary-3-main);
 }
 

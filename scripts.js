@@ -42,6 +42,8 @@ settingsDropdownHeader.forEach(header => {
 const upscaleContext = document.getElementById('upscale-context');
 const upscaleNewGeneration = document.getElementById('upscale-new-generation');
 const upscaleButtonContainer = document.getElementById('upscale-button-container');
+const generateButton = document.getElementById('generate-button');
+const generateUpscaleButton = document.getElementById('generate-upscale-button');
 
 // Add event listener for clicks on the parent container
 upscaleContext.addEventListener('click', (event) => {
@@ -58,9 +60,13 @@ upscaleContext.addEventListener('click', (event) => {
         if (upscaleNewGeneration.classList.contains('selected')) {
             upscaleButtonContainer.style.opacity = '0.35'; // Hide the button container
             upscaleButtonContainer.style.pointerEvents = 'none'; // Hide the button container
+            generateButton.style.display = 'none';
+            generateUpscaleButton.style.display = 'flex';
         } else {
             upscaleButtonContainer.style.opacity = '1'; // Hide the button container
             upscaleButtonContainer.style.pointerEvents = 'all'; // Hide the button container
+            generateButton.style.display = 'flex';
+            generateUpscaleButton.style.display = 'none';
         }
     }
 });
@@ -76,3 +82,13 @@ document.getElementById('random-button').addEventListener('click', function() {
     document.getElementById('random-button').classList.add('selected');
     document.getElementById('recycle-button').classList.remove('selected');
 });
+
+// Get all the size-ratio-option elements
+const sizeRatioOptions = document.querySelectorAll('.size-ratio-option');
+sizeRatioOptions.forEach(option => {
+    option.addEventListener('click', () => {
+        sizeRatioOptions.forEach(opt => opt.classList.remove('selected'));
+        option.classList.add('selected');
+    });
+});
+
