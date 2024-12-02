@@ -57,6 +57,7 @@
 
 textarea {
     color: var(--font-light);
+    font-size: 16px;
     height: auto;
 }
 
@@ -74,6 +75,7 @@ body {
     background-color: var(--back1);
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 /* HEADER (top menu, nav bar) */
@@ -115,6 +117,13 @@ header {
     gap: 12px;
 }
 
+#menu-button-list {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+}
+
 .menu-button {
     position: relative;
     color: var(--font-light);
@@ -129,6 +138,10 @@ header {
     border-radius: 12px;
     cursor: pointer;
     transition: background-color 0.2s;
+}
+
+#header-menu-button {
+    display: none;
 }
 
 .menu-button:hover {
@@ -314,10 +327,9 @@ main {
 }
 
 #prompt-container {
-    position: relative;
+    display: flex;
+    flex-direction: column;
     width: 100%;
-    min-height: 135px;
-    padding-bottom: 40px;
     background-color: var(--back2);
     border: 1px solid transparent;
     border-radius: 12px;
@@ -329,19 +341,25 @@ main {
 }
 
 #prompt-textarea {
+    line-height: 16px;
     width: 100%;
     padding: 12px;
     background-color: transparent;
     border: 0;
     outline: 0;
+    line-height: 18px;
     resize: none;
     flex-shrink: 0;
 }
 
+#under-prompt-controls {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0px 10px 10px 10px;
+}
+
 #generate-button-container {
-    position: absolute;
-    bottom: 12px;
-    right: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -382,6 +400,7 @@ main {
 
 #generate-upscale-button {
     display: none;
+    padding: 0px 6px 0px 20px;
 }
 
 #generate-button:hover {
@@ -390,6 +409,13 @@ main {
 
 #generate-button:active {
     background-color: var(--primary-6);
+}
+
+.generate-upscale-icon {
+    fill: var(--back3);
+    width: 32px;
+    height: 32px;
+    margin-bottom: -5px;
 }
 
 #negative-prompt-textarea {

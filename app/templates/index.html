@@ -3,53 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="../static/css/styles.css">
+    <link rel="stylesheet" href="../static/css/mobile.css">
     <title>Jiggly AI | Create</title>
 </head>
 <body>
     <header>
         <div id="header-left">
-            <img id="header-logo" src="logo.png" alt="logo">
+            <img id="header-logo" src="../static/resources/images/logo.png" alt="logo">
             <h1 id="header-title">Jiggly AI</h1>
+            <div class="menu-button" id="header-menu-button">
+                <div class="header-button-hint">Menu
+                    <div class="header-button-hint-square"></div>
+                </div>
+                <svg class="menu-button-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 128 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M64 360a56 56 0 1 0 0 112 56 56 0 1 0 0-112zm0-160a56 56 0 1 0 0 112 56 56 0 1 0 0-112zM120 96A56 56 0 1 0 8 96a56 56 0 1 0 112 0z"/></svg>
+            </div>
         </div>
         <div id="header-right">
-            <div class="menu-button" id="header-search-button">
-                <div class="header-button-hint">Search
-                    <div class="header-button-hint-square"></div>
+            <div id="menu-button-list">
+                <div class="menu-button" id="header-search-button">
+                    <div class="header-button-hint">Search
+                        <div class="header-button-hint-square"></div>
+                    </div>
+                    <svg class="menu-button-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
                 </div>
-                <svg class="menu-button-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M416 208c0 45.9-14.9 88.3-40 122.7L502.6 457.4c12.5 12.5 12.5 32.8 0 45.3s-32.8 12.5-45.3 0L330.7 376c-34.4 25.2-76.8 40-122.7 40C93.1 416 0 322.9 0 208S93.1 0 208 0S416 93.1 416 208zM208 352a144 144 0 1 0 0-288 144 144 0 1 0 0 288z"/></svg>
-            </div>
-            <div class="menu-button" id="header-discover-button">
-                <div class="header-button-hint">Discover
-                    <div class="header-button-hint-square"></div>
+                <div class="menu-button" id="header-discover-button">
+                    <div class="header-button-hint">Discover
+                        <div class="header-button-hint-square"></div>
+                    </div>
+                    <svg class="menu-button-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm306.7 69.1L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg>
                 </div>
-                <svg class="menu-button-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm306.7 69.1L162.4 380.6c-19.4 7.5-38.5-11.6-31-31l55.5-144.3c3.3-8.5 9.9-15.1 18.4-18.4l144.3-55.5c19.4-7.5 38.5 11.6 31 31L325.1 306.7c-3.2 8.5-9.9 15.1-18.4 18.4zM288 256a32 32 0 1 0 -64 0 32 32 0 1 0 64 0z"/></svg>
-            </div>
-            <div class="menu-button" id="header-chat-button">
-                <div class="header-button-hint">Chat
-                    <div class="header-button-hint-square"></div>
+                <div class="menu-button" id="header-chat-button">
+                    <div class="header-button-hint">Chat
+                        <div class="header-button-hint-square"></div>
+                    </div>
+                    <svg class="menu-button-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M88.2 309.1c9.8-18.3 6.8-40.8-7.5-55.8C59.4 230.9 48 204 48 176c0-63.5 63.8-128 160-128s160 64.5 160 128s-63.8 128-160 128c-13.1 0-25.8-1.3-37.8-3.6c-10.4-2-21.2-.6-30.7 4.2c-4.1 2.1-8.3 4.1-12.6 6c-16 7.2-32.9 13.5-49.9 18c2.8-4.6 5.4-9.1 7.9-13.6c1.1-1.9 2.2-3.9 3.2-5.9zM208 352c114.9 0 208-78.8 208-176S322.9 0 208 0S0 78.8 0 176c0 41.8 17.2 80.1 45.9 110.3c-.9 1.7-1.9 3.5-2.8 5.1c-10.3 18.4-22.3 36.5-36.6 52.1c-6.6 7-8.3 17.2-4.6 25.9C5.8 378.3 14.4 384 24 384c43 0 86.5-13.3 122.7-29.7c4.8-2.2 9.6-4.5 14.2-6.8c15.1 3 30.9 4.5 47.1 4.5zM432 480c16.2 0 31.9-1.6 47.1-4.5c4.6 2.3 9.4 4.6 14.2 6.8C529.5 498.7 573 512 616 512c9.6 0 18.2-5.7 22-14.5c3.8-8.8 2-19-4.6-25.9c-14.2-15.6-26.2-33.7-36.6-52.1c-.9-1.7-1.9-3.4-2.8-5.1C622.8 384.1 640 345.8 640 304c0-94.4-87.9-171.5-198.2-175.8c4.1 15.2 6.2 31.2 6.2 47.8l0 .6c87.2 6.7 144 67.5 144 127.4c0 28-11.4 54.9-32.7 77.2c-14.3 15-17.3 37.6-7.5 55.8c1.1 2 2.2 4 3.2 5.9c2.5 4.5 5.2 9 7.9 13.6c-17-4.5-33.9-10.7-49.9-18c-4.3-1.9-8.5-3.9-12.6-6c-9.5-4.8-20.3-6.2-30.7-4.2c-12.1 2.4-24.8 3.6-37.8 3.6c-61.7 0-110-26.5-136.8-62.3c-16 5.4-32.8 9.4-50 11.8C279 439.8 350 480 432 480z"/></svg>
                 </div>
-                <svg class="menu-button-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M88.2 309.1c9.8-18.3 6.8-40.8-7.5-55.8C59.4 230.9 48 204 48 176c0-63.5 63.8-128 160-128s160 64.5 160 128s-63.8 128-160 128c-13.1 0-25.8-1.3-37.8-3.6c-10.4-2-21.2-.6-30.7 4.2c-4.1 2.1-8.3 4.1-12.6 6c-16 7.2-32.9 13.5-49.9 18c2.8-4.6 5.4-9.1 7.9-13.6c1.1-1.9 2.2-3.9 3.2-5.9zM208 352c114.9 0 208-78.8 208-176S322.9 0 208 0S0 78.8 0 176c0 41.8 17.2 80.1 45.9 110.3c-.9 1.7-1.9 3.5-2.8 5.1c-10.3 18.4-22.3 36.5-36.6 52.1c-6.6 7-8.3 17.2-4.6 25.9C5.8 378.3 14.4 384 24 384c43 0 86.5-13.3 122.7-29.7c4.8-2.2 9.6-4.5 14.2-6.8c15.1 3 30.9 4.5 47.1 4.5zM432 480c16.2 0 31.9-1.6 47.1-4.5c4.6 2.3 9.4 4.6 14.2 6.8C529.5 498.7 573 512 616 512c9.6 0 18.2-5.7 22-14.5c3.8-8.8 2-19-4.6-25.9c-14.2-15.6-26.2-33.7-36.6-52.1c-.9-1.7-1.9-3.4-2.8-5.1C622.8 384.1 640 345.8 640 304c0-94.4-87.9-171.5-198.2-175.8c4.1 15.2 6.2 31.2 6.2 47.8l0 .6c87.2 6.7 144 67.5 144 127.4c0 28-11.4 54.9-32.7 77.2c-14.3 15-17.3 37.6-7.5 55.8c1.1 2 2.2 4 3.2 5.9c2.5 4.5 5.2 9 7.9 13.6c-17-4.5-33.9-10.7-49.9-18c-4.3-1.9-8.5-3.9-12.6-6c-9.5-4.8-20.3-6.2-30.7-4.2c-12.1 2.4-24.8 3.6-37.8 3.6c-61.7 0-110-26.5-136.8-62.3c-16 5.4-32.8 9.4-50 11.8C279 439.8 350 480 432 480z"/></svg>
-            </div>
-            <div class="menu-button" id="header-generate-button">
-                <div class="header-button-hint">Generate
-                    <div class="header-button-hint-square"></div>
+                <div class="menu-button" id="header-generate-button">
+                    <div class="header-button-hint">Generate
+                        <div class="header-button-hint-square"></div>
+                    </div>
+                    <svg class="menu-button-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M448 80c8.8 0 16 7.2 16 16l0 319.8-5-6.5-136-176c-4.5-5.9-11.6-9.3-19-9.3s-14.4 3.4-19 9.3L202 340.7l-30.5-42.7C167 291.7 159.8 288 152 288s-15 3.7-19.5 10.1l-80 112L48 416.3l0-.3L48 96c0-8.8 7.2-16 16-16l384 0zM64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zm80 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"/></svg>
                 </div>
-                <svg class="menu-button-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M448 80c8.8 0 16 7.2 16 16l0 319.8-5-6.5-136-176c-4.5-5.9-11.6-9.3-19-9.3s-14.4 3.4-19 9.3L202 340.7l-30.5-42.7C167 291.7 159.8 288 152 288s-15 3.7-19.5 10.1l-80 112L48 416.3l0-.3L48 96c0-8.8 7.2-16 16-16l384 0zM64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l384 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32zm80 192a48 48 0 1 0 0-96 48 48 0 1 0 0 96z"/></svg>
-            </div>
-            <div class="menu-button" id="header-notifications-button">
-                <div class="header-button-hint">Notifications
-                    <div class="header-button-hint-square"></div>
+                <div class="menu-button" id="header-notifications-button">
+                    <div class="header-button-hint">Notifications
+                        <div class="header-button-hint-square"></div>
+                    </div>
+                    <svg class="menu-button-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M224 0c-17.7 0-32 14.3-32 32l0 19.2C119 66 64 130.6 64 208l0 25.4c0 45.4-15.5 89.5-43.8 124.9L5.3 377c-5.8 7.2-6.9 17.1-2.9 25.4S14.8 416 24 416l400 0c9.2 0 17.6-5.3 21.6-13.6s2.9-18.2-2.9-25.4l-14.9-18.6C399.5 322.9 384 278.8 384 233.4l0-25.4c0-77.4-55-142-128-156.8L256 32c0-17.7-14.3-32-32-32zm0 96c61.9 0 112 50.1 112 112l0 25.4c0 47.9 13.9 94.6 39.7 134.6L72.3 368C98.1 328 112 281.3 112 233.4l0-25.4c0-61.9 50.1-112 112-112zm64 352l-64 0-64 0c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z"/></svg>
                 </div>
-                <svg class="menu-button-svg" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.--><path d="M224 0c-17.7 0-32 14.3-32 32l0 19.2C119 66 64 130.6 64 208l0 25.4c0 45.4-15.5 89.5-43.8 124.9L5.3 377c-5.8 7.2-6.9 17.1-2.9 25.4S14.8 416 24 416l400 0c9.2 0 17.6-5.3 21.6-13.6s2.9-18.2-2.9-25.4l-14.9-18.6C399.5 322.9 384 278.8 384 233.4l0-25.4c0-77.4-55-142-128-156.8L256 32c0-17.7-14.3-32-32-32zm0 96c61.9 0 112 50.1 112 112l0 25.4c0 47.9 13.9 94.6 39.7 134.6L72.3 368C98.1 328 112 281.3 112 233.4l0-25.4c0-61.9 50.1-112 112-112zm64 352l-64 0-64 0c0 17 6.7 33.3 18.7 45.3s28.3 18.7 45.3 18.7s33.3-6.7 45.3-18.7s18.7-28.3 18.7-45.3z"/></svg>
             </div>
             <div id="header-token-balance-container">
-                <img id="header-token-icon" src="token-icon.png" alt="tokens">
+                <img id="header-token-icon" src="../static/resources/images/token-icon.png" alt="tokens">
                 <p id="header-token-balance">435</p>
             </div>
             <div id="header-subscribe-button">Subscribe</div>
             <div id="header-profile-button">
-                <img id="header-profile-picture" src="example-profile.jpeg" alt="profile picture">
+                <img id="header-profile-picture" src="../static/resources/images/example-profile.jpeg" alt="profile picture">
             </div>
         </div>
     </header>
@@ -76,19 +85,21 @@
         </div>
         <div id="image-panel">
             <div id="prompt-container">
-                <div id="generate-button-container">
-                    <div id="generate-token-cost">
-                        <img id="generate-token-icon" src="token-icon.png" alt="tokens">
-                        <p id="generate-cost-value">-5</p>
-                    </div>
-                    <div class="generate-button" id="generate-button">Generate</div>
-                    <div class="generate-button" id="generate-upscale-button">Generate + Upscale</div>
-                </div>
                 <textarea class="prompt-textarea" id="prompt-textarea" name="prompt" rows="3" placeholder="Prompt..." required></textarea>
+                <div id="under-prompt-controls">
+                    <div id="generate-button-container">
+                        <div id="generate-token-cost">
+                            <img id="generate-token-icon" src="../static/resources/images/token-icon.png" alt="tokens">
+                            <p id="generate-cost-value">-5</p>
+                        </div>
+                        <div class="generate-button" id="generate-button">Generate</div>
+                        <div class="generate-button" id="generate-upscale-button">Generate<svg class="generate-upscale-icon" xmlns="http://www.w3.org/2000/svg" data-name="Layer 1" viewBox="0 0 100 125" x="0px" y="0px"><path d="M21,34v7.83A4.12,4.12,0,0,0,24.61,46,4,4,0,0,0,29,42V34a6,6,0,0,1,6-6H66a6,6,0,0,1,6,6V65a6,6,0,0,1-6,6H58.17A4.12,4.12,0,0,0,54,74.61,4,4,0,0,0,58,79h8A14,14,0,0,0,80,65V34A14,14,0,0,0,66,20H35A14,14,0,0,0,21,34Z"/><path d="M16,63V75a9,9,0,0,0,9,9H37a9,9,0,0,0,9-9V63a9,9,0,0,0-.46-2.83L56,49.66V56a4,4,0,0,0,4.39,4A4.12,4.12,0,0,0,64,55.83V46A10,10,0,0,0,54,36H44a4,4,0,0,0-4,4.39A4.12,4.12,0,0,0,44.17,44h6.17L39.91,54.49A8.94,8.94,0,0,0,37,54H25A9,9,0,0,0,16,63Zm8,0a1,1,0,0,1,1-1H37a1,1,0,0,1,1,1V75a1,1,0,0,1-1,1H25a1,1,0,0,1-1-1Z"/></svg></div>
+                    </div>
+                </div>
             </div>
             <textarea class="prompt-textarea" id="negative-prompt-textarea" name="negative-prompt" rows="2" placeholder="Negative Prompt..."></textarea>
             <div id="output-image-container">
-                <img id="output-image" src="example-output.jpeg" alt="">
+                <img id="output-image" src="../static/resources/images/example-output.jpeg" alt="">
             </div>
         </div>
         <div id="settings-panel">
@@ -185,7 +196,7 @@
                     <!-- START UPSCALE BUTTON -->
                     <div id="upscale-button-container">
                         <div id="upscale-token-cost">
-                            <img id="upscale-token-icon" src="token-icon.png" alt="tokens">
+                            <img id="upscale-token-icon" src="../static/resources/images/token-icon.png" alt="tokens">
                             <p id="upscale-cost-value">-10</p>
                         </div>
                         <div id="upscale-button">Upscale</div>
@@ -201,7 +212,7 @@
             </div>
         </div>
     </main>
-    <script src="scripts.js"></script>
-    <script src="custom-inputs.js"></script>
+    <script src="../static/js/scripts.js"></script>
+    <script src="../static/js/custom-inputs.js"></script>
 </body>
 </html>

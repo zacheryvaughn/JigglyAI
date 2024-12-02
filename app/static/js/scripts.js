@@ -22,6 +22,35 @@ textareas.forEach(textarea => {
     }
 });
 
+const menuButtonList = document.getElementById('menu-button-list');
+const headerMenuButton = document.getElementById('header-menu-button');
+let closeTimeout;
+const closeMenu = () => {
+    menuButtonList.classList.remove('open');
+};
+const startCloseTimer = () => {
+    clearTimeout(closeTimeout);
+    closeTimeout = setTimeout(closeMenu, 3000);
+};
+const cancelCloseTimer = () => {
+    clearTimeout(closeTimeout);
+};
+headerMenuButton.addEventListener('click', () => {
+    const isOpen = menuButtonList.classList.toggle('open');
+    if (isOpen) {
+        startCloseTimer();
+    }
+});
+document.addEventListener('click', (event) => {
+    const isClickInside = menuButtonList.contains(event.target) || headerMenuButton.contains(event.target);
+    if (!isClickInside) {
+        closeMenu();
+    }
+});
+menuButtonList.addEventListener('mouseover', cancelCloseTimer); // Stop the timer when hovering
+menuButtonList.addEventListener('mouseout', startCloseTimer);   // Restart the timer when leaving
+
+
 // Toggle dropdowns
 const settingsDropdownContainer = document.querySelectorAll('.settings-dropdown-container');
 const settingsDropdownHeader = document.querySelectorAll('.settings-dropdown-header');
