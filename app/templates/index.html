@@ -11,7 +11,7 @@
 <body>
     <header>
         <div id="header-left">
-            <img id="header-logo" src="../static/resources/images/logo.png" alt="logo">
+            <img id="header-logo" src="{{ url_for('static', filename='resources/images/logo.png') }}" alt="logo">
             <h1 id="header-title">Jiggly AI</h1>
             <div class="menu-button" id="header-menu-button">
                 <div class="header-button-hint">Menu
@@ -54,12 +54,12 @@
                 </div>
             </div>
             <div id="header-token-balance-container">
-                <img id="header-token-icon" src="../static/resources/images/token-icon.png" alt="tokens">
+                <img id="header-token-icon" src="{{ url_for('static', filename='resources/images/token-icon.png') }}" alt="tokens">
                 <p id="header-token-balance">435</p>
             </div>
             <div id="header-subscribe-button">Subscribe</div>
             <div id="header-profile-button">
-                <img id="header-profile-picture" src="../static/resources/images/example-profile.jpeg" alt="profile picture">
+                <img id="header-profile-picture" src="{{ url_for('static', filename='resources/images/example-profile.jpeg') }}" alt="profile picture">
             </div>
         </div>
     </header>
@@ -90,7 +90,7 @@
                 <div id="under-prompt-controls">
                     <div id="generate-button-container">
                         <div id="generate-token-cost">
-                            <img id="generate-token-icon" src="../static/resources/images/token-icon.png" alt="tokens">
+                            <img id="generate-token-icon" src="{{ url_for('static', filename='resources/images/token-icon.png') }}" alt="tokens">
                             <p id="generate-cost-value">-5</p>
                         </div>
                         <div class="generate-button" id="generate-button">Generate</div>
@@ -100,7 +100,7 @@
             </div>
             <textarea class="prompt-textarea" id="negative-prompt-textarea" name="negative-prompt" rows="2" placeholder="Negative Prompt..."></textarea>
             <div id="output-image-container">
-                <img id="output-image" src="../static/resources/images/example-output.jpeg" alt="">
+                <img id="output-image" src="{{ url_for('static', filename='resources/images/example-output.jpeg') }}" alt="">
             </div>
         </div>
         <div id="settings-panel">
@@ -197,7 +197,7 @@
                     <!-- START UPSCALE BUTTON -->
                     <div id="upscale-button-container">
                         <div id="upscale-token-cost">
-                            <img id="upscale-token-icon" src="../static/resources/images/token-icon.png" alt="tokens">
+                            <img id="upscale-token-icon" src="{{ url_for('static', filename='resources/images/token-icon.png') }}" alt="tokens">
                             <p id="upscale-cost-value">-10</p>
                         </div>
                         <div id="upscale-button">Upscale</div>
