@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../static/css/styles.css">
-    <link rel="stylesheet" href="../static/css/mobile.css">
+    <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/mobile.css') }}">
     <title>Jiggly AI | Create</title>
 </head>
 <body>
@@ -212,7 +213,8 @@
             </div>
         </div>
     </main>
-    <script src="../static/js/scripts.js"></script>
-    <script src="../static/js/custom-inputs.js"></script>
+    <script src="{{ url_for('static', filename='js/client.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/scripts.js') }}"></script>
+    <script src="{{ url_for('static', filename='js/custom-inputs.js') }}"></script>
 </body>
 </html>

@@ -1,0 +1,18 @@
+# Ignore environment and variables
+.venv/
+.env
+
+# Ignore Python cache files and directories
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Ignore specific directories
+app/dev_utils/
+outputs/
+models/
+
+# Ignore others
+install-reqs.txt
+structure.md
