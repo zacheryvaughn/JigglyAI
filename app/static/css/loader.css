@@ -5,6 +5,7 @@
 }
 
 #output-image-loader {
+  display: none;
   transform: scale(75%);
   overflow: visible;
   width: 100px;

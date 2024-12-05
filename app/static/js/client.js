@@ -5,8 +5,11 @@ socket.on("disconnect", () => console.log("Disconnected from the server."));
 
 const generateButton = document.getElementById("generate-button");
 const outputImageContainer = document.getElementById("output-image-container");
+const outputImageLoader = document.getElementById("output-image-loader");
 
 generateButton.addEventListener("click", () => {
+    outputImageLoader.style.display = "block";
+
     const prompt = document.getElementById("prompt-textarea").value;
     if (!prompt) {
         alert("Please enter a prompt.");
@@ -33,6 +36,8 @@ generateButton.addEventListener("click", () => {
 
 
 socket.on("generation_completed", (data) => {
+    outputImageLoader.style.display = "none";
+    
     let outputImage = document.getElementById("output-image");
     if (!outputImage) {
         outputImage = document.createElement("img");
@@ -41,6 +46,12 @@ socket.on("generation_completed", (data) => {
     }
     outputImage.src = `/outputs/${data.filename}`;
     outputImage.alt = "Generated Image";
+});
+
+
+socket.on("generation_failed", (data) => {
+    outputImageLoader.style.display = "none";
+
 });
 
 socket.on("update_queue", (data) => {
