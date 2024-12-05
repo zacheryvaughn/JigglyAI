@@ -1,7 +1,7 @@
 import queue
 import threading
 from app import socketio
-from .generate import start_generation, cancel_generation
+from .generate import start_generation
 
 task_queue = queue.Queue()
 cancel_flag = threading.Event()
@@ -38,7 +38,6 @@ def process_queue():
 
 def cancel_task():
     cancel_flag.set()
-    cancel_generation()
     update_queue_state()
 
 def cancel_queue_item(index):

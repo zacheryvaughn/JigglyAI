@@ -1141,7 +1141,7 @@ class UnicornFloatRange extends HTMLElement {
                     display: flex;
                     align-items: center;
                     width: 100%;
-                    height: 2px;
+                    height: 3px;
                     min-width: 60px;
                     border-radius: 100px;
                     background-image: linear-gradient(to right, var(--primary-3-main) 0%, var(--primary-1) 0%);
@@ -1151,8 +1151,8 @@ class UnicornFloatRange extends HTMLElement {
                 .unicorn-range-thumb {
                     position: absolute;
                     top: 50%;
-                    width: 12px;
-                    height: 12px;
+                    width: 13px;
+                    height: 13px;
                     background-color: var(--primary-3-main);
                     outline: 0px solid var(--primary-3-main-transparent);
                     border-radius: 100px;
@@ -1192,7 +1192,7 @@ class UnicornFloatRange extends HTMLElement {
                     color: var(--font-light);
                     width: calc(100% - 40px);
                     height: 100%;
-                    font-size: 14px;
+                    font-size: 15px;
                     text-align: left;
                     padding: 0px 0px 0px 8px;
                     border: none;

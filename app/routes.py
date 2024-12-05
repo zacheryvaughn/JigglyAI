@@ -1,7 +1,7 @@
 import os
 from flask import render_template, send_from_directory
 from app import app, socketio
-from .queue import add_task, cancel_task, cancel_all_tasks, cancel_queue_item, update_queue_state
+from .queue import add_task, cancel_queue_item, update_queue_state
 
 @app.route("/")
 def index():
@@ -29,19 +29,9 @@ def on_start_generation(data):
     print("Adding request to queue.")
     add_task(data)
 
-@socketio.on("cancel_generation")
-def on_cancel_generation():
-    print("Cancel generation request received.")
-    cancel_task()
-
 @socketio.on("cancel_queue_item")
 def on_cancel_queue_item(data):
     index = data.get("index")
     if index is not None:
         print("Canceling queued request...")
         cancel_queue_item(index)
-
-@socketio.on("cancel_all_queue_items")
-def on_cancel_all_queue_items():
-    print("Canceling all queued requests.")
-    cancel_all_tasks()

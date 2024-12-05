@@ -6,6 +6,7 @@
     <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/mobile.css') }}">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/loader.css') }}">
     <title>Jiggly AI | Create</title>
 </head>
 <body>
@@ -100,7 +101,14 @@
             </div>
             <textarea class="prompt-textarea" id="negative-prompt-textarea" name="negative-prompt" rows="2" placeholder="Negative Prompt..."></textarea>
             <div id="output-image-container">
-                <img id="output-image" src="{{ url_for('static', filename='resources/images/example-output.jpeg') }}" alt="">
+                <svg id="output-image-loader">
+                    <g>
+                      <path d="M 50,100 A 1,1 0 0 1 50,0"/>
+                    </g>
+                    <g>
+                      <path d="M 50,75 A 1,1 0 0 0 50,-25"/>
+                    </g>
+                  </svg>
             </div>
         </div>
         <div id="settings-panel">

@@ -71,11 +71,11 @@ settingsDropdownHeader.forEach(header => {
 const upscaleContext = document.getElementById('upscale-context');
 const upscaleNewGeneration = document.getElementById('upscale-new-generation');
 const upscaleButtonContainer = document.getElementById('upscale-button-container');
-const generateButton = document.getElementById('generate-button');
 const generateUpscaleButton = document.getElementById('generate-upscale-button');
 
 // Add event listener for clicks on the parent container
 upscaleContext.addEventListener('click', (event) => {
+    const generateButton = document.getElementById('generate-button');
     // Check if the clicked element is part of the toggleable items
     if (event.target.id === 'upscale-current-image' || event.target.id === 'upscale-new-generation') {
         // Remove 'selected' class from all children
